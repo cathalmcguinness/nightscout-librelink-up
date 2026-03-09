@@ -113,7 +113,7 @@ else
         retry(main, { retryAttempts: config.retryAttempts, retryIntervalSeconds: config.retryIntervalSeconds }).then();
     }, {});
 
-    // Catch missed exectutions, and retry if exectution is missed
+    // Catch missed executions, and retry if execution is missed
     task.on('execution:missed', () => {
         retry(main, { retryAttempts: config.retryAttempts, retryIntervalSeconds: config.retryIntervalSeconds }).then();
     });
